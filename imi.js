@@ -9,6 +9,12 @@ const rowHeight = 100
 const fontSize = 36
 
 function drawTemplate(labels) {
+  fetch(labels).then(function (res) {
+  if (!res.ok) throw new Error("fetch failed");
+    return res.arrayBuffer();
+  }).then(function (data) {
+    console.log(data)
+  })
   miro.board.widgets.create({type:'sticker', text: 'Hello'})
 }
 

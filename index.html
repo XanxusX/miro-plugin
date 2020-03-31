@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://miro.com/app/static/sdk.1.1.js"></script>
+    <script type="text/javascript">
+    miro.onReady(() => {
+      miro.initialize({
+        extensionPoints: {
+          bottomBar: {
+            title: 'IMI',
+            toolbarSvgIcon: icon24,
+            librarySvgIcon: icon48,
+            onClick: () => {
+              miro.board.ui.openLibrary('imi.html', {title: 'IMI'})
+            }
+          }
+        }
+      })
+    })
+    </script>
+</head>
+</html>

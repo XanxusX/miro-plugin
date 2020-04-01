@@ -15,7 +15,7 @@ function drawTemplate(labels) {
   }).then(function (data) {
     console.log(data)
   })
-  miro.board.widgets.create({type:'sticker', text: 'Hello'})
+  miro.board.widgets.create({type:'sticker', text: 'Hello', metadata: 'position: '123'})
 }
 
 function getShape(x, y, color) {

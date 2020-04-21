@@ -22,7 +22,7 @@
   document.getElementById("submit")
       .addEventListener("click", () => FitStickers())
     
-  function FitStickers() {
+  async function FitStickers() {
       const stickers = await miro.board.widgets.get({'type': 'sticker'})
       const newStickers = stickers
 		.map(({id, text}) => ({

@@ -20,8 +20,19 @@
   addRowInput('')
 
   document.getElementById("submit")
-      .addEventListener("click", () => drawTemplate(getLabels()))
+      .addEventListener("click", () => FitStickers())
+    
+  function FitStickers() {
+      const stickers = await miro.board.widgets.get({'type': 'sticker'})
+      const newStickers = stickers
+		.map(({id, text}) => ({
+			id,
+			text: text + '1' 
+		}))
 
+	await miro.board.widgets.update(newLines)
+  }
+    
   function addRowInput(value) {
     const row = document.createElement('div')
     row.classList.add('row')

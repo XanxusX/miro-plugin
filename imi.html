@@ -27,7 +27,7 @@
       const newStickers = stickers
 		.map(({id, text}) => ({
 			id,
-			text: text + '1' 
+			style: {fontSize:48}
 		}))
 
 	await miro.board.widgets.update(newStickers)
